@@ -1,0 +1,233 @@
+# 📈 Customer Lifetime Value (LTV) Prediction
+
+## 📌 Project Overview
+
+Customer Lifetime Value (LTV) Prediction is a Machine Learning project that estimates the future value a customer is likely to generate based on their historical purchase behavior.
+
+The project helps businesses identify high-value customers, optimize marketing campaigns, improve customer retention, and maximize long-term revenue.
+
+---
+
+## 🎯 Business Problem
+
+Companies spend significant resources on acquiring and retaining customers. However, not every customer contributes equally to business growth.
+
+By predicting Customer Lifetime Value (LTV), businesses can:
+
+- Identify high-value customers
+- Improve customer retention strategies
+- Personalize marketing campaigns
+- Allocate marketing budgets efficiently
+- Increase long-term profitability
+
+---
+
+## 📂 Dataset
+
+**Dataset:** Online Retail II Dataset
+
+The dataset contains transactional records from a UK-based online retail store.
+
+### Features
+
+- Invoice Number
+- Stock Code
+- Product Description
+- Quantity
+- Invoice Date
+- Unit Price
+- Customer ID
+- Country
+
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- XGBoost
+- Joblib
+- Jupyter Notebook
+
+---
+
+## 📊 Project Workflow
+
+### 1. Data Collection
+
+- Loaded Online Retail II Dataset
+- Explored dataset structure
+- Checked missing values and duplicates
+
+---
+
+### 2. Data Cleaning
+
+- Removed duplicate records
+- Removed missing Customer IDs
+- Removed missing product descriptions
+- Removed cancelled orders (negative quantity)
+- Removed invalid prices
+- Converted InvoiceDate to datetime
+- Created TotalAmount feature
+
+---
+
+### 3. Exploratory Data Analysis (EDA)
+
+Performed exploratory analysis using:
+
+- Revenue Distribution
+- Country-wise Revenue
+- Top Selling Products
+- Top Customers
+- Correlation Heatmap
+- Transaction Analysis
+
+---
+
+### 4. Feature Engineering
+
+Created customer-level features including:
+
+- Frequency
+- Monetary Value
+- Recency
+- Average Order Value (AOV)
+- Total Quantity Purchased
+- Average Quantity
+- Customer Tenure
+- Basket Size
+- Purchase Gap
+- Orders Per Day
+
+A time-based train-test split was used to prevent data leakage and simulate real-world future predictions.
+
+---
+
+### 5. Machine Learning Models
+
+Implemented and compared:
+
+- Random Forest Regressor
+- XGBoost Regressor
+
+The final model was selected based on prediction performance.
+
+---
+
+## 📈 Model Performance
+
+| Metric | Score |
+|---------|-------|
+| MAE | **486.02** |
+| RMSE | **5268.45** |
+| R² Score | **0.0489** |
+
+Although the R² score is modest, this is expected for customer lifetime value prediction because future customer purchasing behavior is highly uncertain and influenced by many external factors not present in the dataset.
+
+---
+
+## 📊 Visualizations
+
+The project includes:
+
+- Feature Importance
+- Customer Segmentation
+- Revenue Distribution
+- Correlation Heatmap
+- Actual vs Predicted Values
+- Residual Distribution
+
+---
+
+## 👥 Customer Segmentation
+
+Customers were segmented into three groups based on predicted lifetime value:
+
+- 🟢 High Value Customers
+- 🟡 Medium Value Customers
+- 🔴 Low Value Customers
+
+These segments can help businesses design personalized marketing strategies and improve customer retention.
+
+---
+
+## 📁 Project Structure
+
+```
+Customer-Lifetime-Value-Prediction/
+│
+├── data/
+│   └── Online Sales Data.csv
+│
+├── notebooks/
+│   └── Customer_LTV_Prediction.ipynb
+│
+├── models/
+│   └── Customer_LTV_Model.pkl
+│
+├── outputs/
+│   ├── Final_LTV_Predictions.csv
+│   ├── feature_importance.png
+│   ├── customer_segments.png
+│   ├── actual_vs_predicted.png
+│   └── residual_distribution.png
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+---
+
+## 🚀 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/sakshi-419/Customer-Lifetime-Value-Prediction.git
+```
+
+Move into the project directory:
+
+```bash
+cd Customer-Lifetime-Value-Prediction
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the notebook or Python script.
+
+---
+
+## 📌 Future Improvements
+
+- Hyperparameter tuning using GridSearchCV
+- LightGBM and CatBoost implementation
+- Customer churn prediction
+- Streamlit dashboard
+- Flask/FastAPI deployment
+- Real-time LTV prediction API
+
+---
+
+## 💡 Business Insights
+
+- Customers with higher purchase frequency generally generate higher lifetime value.
+- Monetary value and recency are strong indicators of future customer value.
+- Customer segmentation enables targeted marketing campaigns.
+- Predictive analytics can improve customer retention and maximize marketing ROI.
+
+---
+
+## 👩‍💻 Author
+giving it a Star on GitHub!
